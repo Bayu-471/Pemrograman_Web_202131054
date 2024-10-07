@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pemesanan Tiket Bus</title>
+</head>
+<body>
+    <h1>Formulir Pemesanan Tiket Bus</h1>
+    <p>Perusahaan Otobus Mitra Nusantara</p>
+    <p>JL. Taman Semanan Indah No.77, RT.02/RW.07/Jakbar</p>
+    <br><br>
+    <form action="hasil.html">
+        <fieldset>
+            <label form="nama">Nama Pemesan:</label>
+            <input type="text" name="nama" placeholder="Masukan Nama Lengkap" autofocus/>
+            <br><br>
+            <label form="nomor_hp">No Handphone:</label>
+            <input type="tel" name="nomor_hp" id="nomor_hp" placeholder="Masukan Nomor Handphone">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <br><br>
+            <label for="kotaasal">Pilih Kota Asal:</label>
+            <select name="kotaasal" id="kotaasal">
+                <option value="jk">Jakarta</option>
+                <option value="sr">Surabaya</option>
+                <option value="bd">Bandung</option>
+                <option value="sm">Semarang</option>
+                <option value="yg">Yogyakarta</option>
+                <option value="bk">Bekasi</option>
+                <option value="tg">tangerang</option>
+                <option value="dp">depok</option>
+                <option value="mg">malang</option>
+                <option value="sl">solo</option>
+            </select>
+            <br><br>
+            <label for="kotatujuan">Pilih Kota Tujuan:</label>
+            <select name="kotatujuan" id="kotatujuan">
+                <option value="jk">Jakarta</option>
+                <option value="sr">Surabaya</option>
+                <option value="bd">Bandung</option>
+                <option value="sm">Semarang</option>
+                <option value="yg">Yogyakarta</option>
+                <option value="bk">Bekasi</option>
+                <option value="tg">tangerang</option>
+                <option value="dp">depok</option>
+                <option value="mg">malang</option>
+                <option value="sl">solo</option>
+            </select>
+            <br><br>
+            <label for="tanggal">Tanggal Berangkat:</label>
+            <input type="date" id="tanggal" name="tanggal">
+            <br><br>
+            <label for="waktukeberangkatan">Pilih Waktu Keberangkatan:</label>
+            <select name="waktukeberangkatan" id="waktukeberangkatan">
+                <option value="pg">pagi (08.00)</option>
+                <option value="si">siang (15.00)</option>
+                <option value="so">sore (17.00)</option>
+                <option value="mm">malam (20.00)</option>
+            </select>
+            <br><br>
+            <label for="kelasbus">Pilih kelas bus:</label>
+            <select name="kelasbus" id="kelasbus">
+                <option value="bs">bisnis</option>
+                <option value="vp">vip</option>
+                <option value="ek">eksekutif</option>
+                <option value="se">super eksekutif</option>
+                <option value="sp">sleeper</option>
+            </select>
+            <br><br>
+            <label for="jumlah">Jumlah Tiket:</label>
+            <input type="number" id="jumlah" min="1" placeholder="Masukan Jumlah Tiket">
+            <br><br>
+            <input type="submit" value="Pesan Tiket">
+        </fieldset>
+    </form>
+</body>
+</html>
