@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menyembunyikan Konten</title>
+  <link href="assets/js/bootstrap.js">
+  <link href="assets/css/bootstrap.css">
+  <style>
+    #content {
+      display: none; /* Awalnya disembunyikan */
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid black;
+      background-color: cyan;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Laporan Teori</h1>
+  <h3>Bayu Alif Pratikno | 202131054</h3>
+  <button id="toggleButton">Tampilkan Konten</button>
+  <div id="content">
+    <p>Mengapa menggunakan <i>HTML</i>, <i>CSS</i>, dan <i>JavaScript</i>?</p>
+    <p><i>HTML</i> (HyperText Markup Language): Struktur</p>
+    <li>HTML adalah bahasa markup yang digunakan untuk menentukan struktur konten sebuah halaman web.</li>
+    <li>Contohnya: Membuat elemen seperti heading, paragraf, tabel, formulir, dan gambar.</li>
+    <li>Tanpa HTML, tidak ada kerangka untuk menampilkan konten.</li>
+    <p><i>CSS</i> (Cascading Style Sheets): Desain dan Tampilan</p>
+    <li>CSS digunakan untuk mengatur tampilan dan gaya dari elemen HTML, seperti warna, ukuran, margin, font, tata letak, dan animasi.</li>
+    <li>Memisahkan gaya dari struktur (HTML) membuat kode lebih bersih dan mudah dikelola.</li>
+    <li>Contohnya: Membuat desain responsif untuk perangkat yang berbeda.</li>
+    <p><i>JavaScript:</i> Interaktivitas</p>
+    <li>JavaScript adalah bahasa pemrograman yang memungkinkan halaman web menjadi dinamis dan interaktif.</li>
+    <li>Fungsinya mencakup validasi formulir, manipulasi DOM (Document Object Model), animasi, dan komunikasi dengan server (AJAX).</li>
+    <li>Tanpa JavaScript, halaman web akan bersifat statis dan kurang responsif.</li>
+  </div>
+
+  <script>
+    const button = document.getElementById('toggleButton');
+    const content = document.getElementById('content');
+
+    button.addEventListener('click', () => {
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        button.textContent = 'Sembunyikan Konten';
+      } else {
+        content.style.display = 'none';
+        button.textContent = 'Tampilkan Konten';
+      }
+    });
+  </script>
+</body>
+</html>
