@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAPORAN TEOR</title>
+    <link href="assets/css/bootstrap.min.css">
+    <style>
+            #content {
+        margin-left: 250px;
+    }
+
+    #sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-right: 1px solid #ddd;
+    }
+
+    #sidebar .nav-link {
+        cursor: pointer;
+    }
+    </style
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h5>Daftar Soal</h5>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" onclick="showAnswer(1)">Soal 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="showAnswer(2)">Soal 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="showAnswer(3)">Soal 3</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="content" class="container mt-4">
+        <h1>LAPORAN TEORI</h1>
+        <h2>Nama | NIM</h2>
+        <hr>
+        <div id="answer">
+            <p>Klik salah satu soal di sidebar untuk melihat jawabannya.</p>
+        </div>
+    </div>
+
+    <script>
+        function showAnswer(questionNumber) {
+            const answers = {
+                1: "Jawaban untuk Soal 1: Penjelasan mengenai soal 1.",
+                2: "Jawaban untuk Soal 2: Penjelasan mengenai soal 2.",
+                3: "Jawaban untuk Soal 3: Penjelasan mengenai soal 3."
+            };
+    
+            document.getElementById('answer').innerHTML = `<p>${answers[questionNumber]}</p>`;
+        }
+    </script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
